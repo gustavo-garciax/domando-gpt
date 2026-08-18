@@ -1,7 +1,9 @@
+import './Header.css'
+
 const Header = () => {
   return (
   <>
-  <header>
+  <header className="header-pizzaria">
     <h1>🍕Seja bem-vindo à OpenPizzaria!</h1>
     <p>
       As melhores pizzas, preparadas com carinho para deixar seu momento ainda
