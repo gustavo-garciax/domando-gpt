@@ -5,9 +5,9 @@ import "./Global.css";
 
 function App() {
   return (
-    <div className="conteiner">
+    <div className="container">
 
-      
+
       <Header />
 
       <Banner />
