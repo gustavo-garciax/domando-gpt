@@ -4,6 +4,7 @@ import Cards from "./Components/Cards";
 import Menu from "./Components/Menu";
 import Footer from "./Components/Footer";
 import "./Global.css";
+import FeedBack from "./Components/FeedBack";
 
 
 function App() {
@@ -19,6 +20,10 @@ function App() {
       <Banner />
 
       <Cards />
+
+      <FeedBack />
+
+      <FeedBack />
 
       <Footer titleFooter="OpenPizzaria - todos os direitos reservados - 2026"/>
 
