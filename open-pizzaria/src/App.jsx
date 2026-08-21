@@ -1,9 +1,10 @@
 import Header from "./Components/Header";
 import Banner from "./Components/Banner";
 import Cards from "./Components/Cards";
+import Menu from "./Components/Menu";
 import Footer from "./Components/Footer";
 import "./Global.css";
-import Menu from "./Components/Menu";
+
 
 function App() {
   return (
