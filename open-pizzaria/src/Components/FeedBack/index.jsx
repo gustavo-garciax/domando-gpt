@@ -48,7 +48,7 @@ const FeedBack = () => {
     return (
         <section className="feedBack">
             {feedbacks.map((feedback) =>
-                <article className="contentFeedBack">
+                <article className="contentFeedBack" key={feedback.id}>
                     <img src={feedback.imagem} width={80} height={80} alt={`foto de ${feedback.nome}`} />
                     <h1>{feedback.nome}</h1>
                     <img src={estrela} width="30" height="30" alt="" />
