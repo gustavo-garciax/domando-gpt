@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './Pages/Home'
-import Sobre from './Pages/Sobre'
+import Sobre from './Pages/Sobre/Sobre'
+import Cardapio from './Pages/Cardapio/Pizzas'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Menu from './Components/Menu'
 
@@ -11,6 +12,7 @@ export default function Router() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />
+            <Route path="/pizzas" element={<Cardapio />} />
         </Routes>
     </BrowserRouter>
   )

@@ -9,7 +9,7 @@ const Menu = () => {
 
 
                 <li className="tem-submenu">
-                    <a href="#pizzas">Pizzas</a>
+                    <Link to="/pizzas">Pizzas</Link>
                     <ul className="submenu">
                         <li><a href="#tradicionais">Tradicionais</a></li>
                         <li><a href="#especiais">Especiais da Casa</a></li>
