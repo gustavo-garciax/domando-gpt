@@ -27,6 +27,7 @@ const Menu = () => {
                 </li>
 
                 <li><Link to="/sobre">Sobre</Link></li>
+                <li><Link to="/users">Usuarios</Link></li>
                 <li><Link to="/contato">Contato</Link></li>
             </ul>
         </nav>

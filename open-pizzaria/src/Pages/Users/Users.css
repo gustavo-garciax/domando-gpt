@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+}
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 25px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 700;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin: 12px auto 25px;
+    background: #ff4500;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ff4500;
+}
+
+/* Botão voltar */
+main > a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 45px;
+    padding: 12px 25px;
+
+    color: #fff;
+    background: #ff4500;
+    text-decoration: none;
+    font-weight: 600;
+
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.35);
+
+    transition: all 0.3s ease;
+}
+
+main > a:hover {
+    background: #ff5c1a;
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(255, 69, 0, 0.65);
+}
+
+/* Área dos usuários */
+.contentUsers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Card */
+.contentUsers article {
+    position: relative;
+    overflow: hidden;
+
+    padding: 28px;
+
+    background: linear-gradient(
+        145deg,
+        #1b1b1b,
+        #111
+    );
+
+    border: 1px solid #292929;
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        0 0 0 rgba(255, 69, 0, 0);
+
+    transition: all 0.35s ease;
+}
+
+/* Linha laranja no topo */
+.contentUsers article::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #ff4500;
+    box-shadow: 0 0 15px #ff4500;
+}
+
+/* Brilho decorativo */
+.contentUsers article::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+
+    top: -60px;
+    right: -60px;
+
+    background: #ff4500;
+    opacity: 0.08;
+    border-radius: 50%;
+}
+
+/* Hover no card */
+.contentUsers article:hover {
+    transform: translateY(-8px);
+    border-color: #ff4500;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.5),
+        0 0 25px rgba(255, 69, 0, 0.2);
+}
+
+/* Informações */
+.contentUsers strong {
+    display: block;
+    margin-bottom: 14px;
+
+    color: #ddd;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* Nome */
+.contentUsers strong:first-child {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Destaque nos dados */
+.contentUsers strong::first-letter {
+    color: #ff4500;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    main {
+        padding: 40px 18px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .contentUsers article {
+        padding: 23px;
+    }
+}
