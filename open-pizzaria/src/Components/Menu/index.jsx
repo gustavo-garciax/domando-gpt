@@ -29,6 +29,7 @@ const Menu = () => {
                 <li><Link to="/sobre">Sobre</Link></li>
                 <li><Link to="/users">Usuarios</Link></li>
                 <li><Link to="/contato">Contato</Link></li>
+                <li><Link to="/comentario">Comentarios</Link></li>
             </ul>
         </nav>
     )

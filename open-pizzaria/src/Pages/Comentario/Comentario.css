@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #2a1108 0%, #0f0f0f 45%);
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* CONTAINER PRINCIPAL */
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+/* TÍTULO */
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin: 15px auto 35px;
+
+    background: #ff4500;
+    border-radius: 10px;
+
+    box-shadow: 0 0 15px #ff4500;
+}
+
+/* BOTÃO VOLTAR */
+
+main > a {
+    display: block;
+    width: fit-content;
+
+    margin: 0 auto 45px;
+    padding: 12px 25px;
+
+    background: #ff4500;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+main > a:hover {
+    background: #ff5c1a;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 10px #ff4500,
+        0 0 25px rgba(255, 69, 0, 0.5);
+}
+
+/* ÁREA DOS COMENTÁRIOS */
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comments h2 {
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+/* CARD DO COMENTÁRIO */
+
+.comment {
+    position: relative;
+    overflow: hidden;
+
+    padding: 25px;
+
+    background: rgba(25, 25, 25, 0.9);
+
+    border: 1px solid #292929;
+    border-radius: 16px;
+
+    transition: all 0.35s ease;
+}
+
+/* BARRA LARANJA */
+
+.comment::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: #ff4500;
+
+    box-shadow: 0 0 15px #ff4500;
+}
+
+/* EFEITO DE BRILHO */
+
+.comment::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -80px;
+    top: -80px;
+
+    background: #ff4500;
+    opacity: 0.06;
+
+    border-radius: 50%;
+}
+
+/* HOVER */
+
+.comment:hover {
+    transform: translateY(-6px);
+
+    border-color: #ff4500;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(255, 69, 0, 0.15);
+}
+
+/* NOME */
+
+.comment strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 20px;
+    color: #fff;
+}
+
+/* ESTRELAS */
+
+.comment span {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: #ff4500;
+
+    font-size: 18px;
+    letter-spacing: 2px;
+
+    text-shadow: 0 0 8px rgba(255, 69, 0, 0.5);
+}
+
+/* TEXTO */
+
+.comment p {
+    color: #bdbdbd;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 92%;
+        padding: 40px 0;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .comment {
+        padding: 20px;
+    }
+
+    .comment strong {
+        font-size: 18px;
+    }
+}
