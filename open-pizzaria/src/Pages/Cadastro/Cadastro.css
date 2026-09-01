@@ -358,3 +358,11 @@
   }
 }
 
+.error {
+    display: block;
+    color: red;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+
