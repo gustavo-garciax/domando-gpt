@@ -9,17 +9,34 @@ export default function () {
         telefone: ""
     })
 
+    //função para atualizar o estado ao digitar no formulario
+    const handleChange = (event) => {
+        const { name, value } = event.target
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            [name]: value,
+        }))
+    }
+
+    //funçao para enviar formulario
+    const handleSubmit = (event) => {
+        event.preventDeFault()
+        console.log("Enviar...")
+    }
+
     return (
         <main className="containerCadastro">
             <h1>Cadastro de usuário</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <article className="form-control">
                     <label htmlFor="nome">Nome</label>
                     <input
                         type="text"
                         name='nome'
                         placeholder='Digite seu nome'
-                        value={formData.nome} />
+                        value={formData.nome}
+                        onChange={handleChange}
+                    />
                 </article>
 
                 <article className="form-control">
@@ -28,7 +45,9 @@ export default function () {
                         type="email"
                         name='email'
                         placeholder='Digite seu email'
-                        value={formData.email} />
+                        value={formData.email}
+                        onChange={handleChange}
+                    />
                 </article>
 
                 <article className="form-control">
@@ -37,7 +56,9 @@ export default function () {
                         type="tel"
                         name='telefone'
                         placeholder='Digite seu telefone'
-                        value={formData.telefone} />
+                        value={formData.telefone}
+                        onChange={handleChange}
+                    />
                 </article>
                 <br />
                 <button>Cadastrar</button>
